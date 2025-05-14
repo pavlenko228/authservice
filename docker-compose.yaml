@@ -1,0 +1,38 @@
+services:
+  db:
+    container_name: AuthDB
+    image: postgres 
+    environment:
+      POSTGRES_DB: authDB
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"  # Перенаправляем порт 8080 на порт 5432 контейнера
+    networks:
+      - app-network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data 
+
+
+  app:
+    container_name: AuthAPI
+    build:
+      context: .  # Путь к папке с Dockerfile приложения
+    ports:
+      - "8443:8443"  # Пробрасываем порт 8443 с контейнера на хост
+    depends_on:
+      - db  # Указываем, что приложение зависит от базы данных
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/authDB  # Используем имя сервиса db вместо localhost
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
