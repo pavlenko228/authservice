@@ -1,4 +1,4 @@
-package com.bank.authservice.domain.model;
+package com.bank.authservice.domain.dto;
 
 public enum Role {
     ROLE_USER,

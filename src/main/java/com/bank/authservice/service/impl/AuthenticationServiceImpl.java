@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import com.bank.authservice.domain.dto.AuthenticationResponse;
 import com.bank.authservice.domain.dto.LoginRequest;
 import com.bank.authservice.domain.dto.RegistrationRequest;
-import com.bank.authservice.domain.model.Role;
+import com.bank.authservice.domain.dto.Role;
 import com.bank.authservice.domain.model.Token;
 import com.bank.authservice.domain.model.User;
 import com.bank.authservice.exception.InvalidRefreshTokenException;

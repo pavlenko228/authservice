@@ -23,7 +23,7 @@ import lombok.RequiredArgsConstructor;
 public class JwtServiceImpl implements JwtService {
 
     @Value("${security.jwt.secret_key}")
-    private String secretKey;
+    public String secretKey;
 
     @Value("${security.jwt.access_token_expiration}")
     private long accessTokenExpiration;
@@ -128,4 +128,5 @@ public class JwtServiceImpl implements JwtService {
 
         return Keys.hmacShaKeyFor(keyBytes);
     }
+
 }

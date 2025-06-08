@@ -2,6 +2,8 @@ package com.bank.authservice.domain.model;
 
 import java.util.List;
 
+import com.bank.authservice.domain.dto.Role;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;

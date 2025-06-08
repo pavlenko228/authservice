@@ -22,3 +22,8 @@ security:
     secret_key: 4eeab38d706831be4b36612ead768ef8182d1dd6f0e14e5dc934652e297fb16a
     access_token_expiration: 36000000 
     refresh_token_expiration: 252000000  
+  
+logging:
+  level:
+    org.springdoc: DEBUG      # Отдельная строка для SpringDoc
+    org.springframework.web: DEBUG 

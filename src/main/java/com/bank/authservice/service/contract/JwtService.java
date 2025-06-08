@@ -39,4 +39,5 @@ public interface JwtService {
     Date extractExpiration(String token);
 
     SecretKey getSigningKey();
+
 }
