@@ -116,6 +116,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
             saveUserToken(accessToken, refreshToken, user);
 
+            response.setHeader("Access-Control-Expose-Headers", "Authorization, X-Refresh-Token");
             response.setHeader(HttpHeaders.AUTHORIZATION, "Bearer " + accessToken);
             response.setHeader("X-Refresh-Token", refreshToken);
 
