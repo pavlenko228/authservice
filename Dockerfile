@@ -7,7 +7,7 @@ WORKDIR /app
 COPY target/authservice-0.0.1-SNAPSHOT.jar authservice.jar
 
 # Открываем порт 8080 (если приложение на нем работает)
-EXPOSE 8443
+EXPOSE 8444
 
 # Запускаем приложение
 ENTRYPOINT ["java", "-jar", "authservice.jar"]
