@@ -1,0 +1,17 @@
+com\bank\authservice\domain\dto\JwtAuthenticationResponse.class
+com\bank\authservice\domain\model\Role.class
+com\bank\authservice\service\AuthenticationService.class
+com\bank\authservice\domain\model\User.class
+com\bank\authservice\repository\UserRepository.class
+com\bank\authservice\AuthServiceApplication.class
+com\bank\authservice\domain\dto\JwtAuthenticationResponse$JwtAuthenticationResponseBuilder.class
+com\bank\authservice\domain\dto\SignUpRequest.class
+com\bank\authservice\controller\ExampleController.class
+com\bank\authservice\config\SecurityConfiguration.class
+com\bank\authservice\domain\model\User$UserBuilder.class
+com\bank\authservice\domain\dto\SignInRequest.class
+com\bank\authservice\service\JwtService.class
+com\bank\authservice\controller\AuthController.class
+com\bank\authservice\domain\model\SecurityUser.class
+com\bank\authservice\config\JwtAuthenticationFilter.class
+com\bank\authservice\service\UserService.class
